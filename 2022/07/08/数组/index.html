@@ -90,7 +90,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">761</span>
+            <span class="post-count">1.1k</span>
         </span>
     </span>
 
@@ -99,7 +99,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">4 min</span>
         </span>
     </span>
 </div>
@@ -127,11 +127,26 @@
 <li>还有一种写法可以用于我们已知数组元素时创建数组。比如，我们已知一个整型数组<code>b</code>元素为<code>&#123;1，2，3，4&#125;</code>可以这样写:<code>int[] b = &#123;1,2,3,4&#125;;</code>我们可以在最后一个值后面随意添加值，反正我们都没有指定数组长度，只要每个值之间用<code>,</code>隔开就好了。</li>
 </ul>
 <h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><p>多维数组使用多个下标访问数组元素，一般用来表示表格或者更复杂的排列形式。</p>
+<ol>
+<li><strong>二维数组</strong> 其实Java语言并没有真正的多维数组，它只有一维数组，但是可以通过两个索引或者更多索引来表示维度。<br>比如要创建一个int类型的二维数组c我们可以这样写<code>int[][] c = new int[3][4]; </code>这就表示创建一个三行四列的一个表（如下图），同样，用关键字<code>new</code>创建的int数组元素默认为0。<br><img src="https://gitlab.com/autlight/pico/uploads/bf38148257fdf20eb3a1a2020dd46061/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84.png" alt="二维数组"></li>
+</ol>
 <ul>
-<li>其实Java语言并没有真正的多维数组，它只有一维数组，但是可以通过两个索引或者更多索引来表示维度。<br>比如要创建一个int类型的二维数组c我们可以这样写<code>int[][] c = new int[3][4]; </code>这就表示创建一个三行四列的一个表（如下图），同样，用关键字<code>new</code>创建的int数组元素默认为0。<br><img src="https://gitlab.com/autlight/pico/uploads/bf38148257fdf20eb3a1a2020dd46061/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84.png" alt="二维数组"></li>
 <li>同样当我们已知数组元素时可以采用另一种写法<code>int[][] d = &#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;,&#123;7,8,9&#125;&#125;</code>这表示我们创建了一个三行三列的表d。</li>
 </ul>
-<h2 id="匿名数组"><a href="#匿名数组" class="headerlink" title="匿名数组"></a>匿名数组</h2><h1 id="操作数组"><a href="#操作数组" class="headerlink" title="操作数组"></a>操作数组</h1> 
+<ol start="2">
+<li><strong>三维数组或更多维</strong>原理和创建方法同二维数组，这里贴两张图方便理解<br>三维数组的逻辑结构：<br><img src="https://gitlab.com/autlight/pico/uploads/736b671d5b17dd4d0ee92c78fc69a454/%E4%B8%89%E7%BB%B4%E6%95%B0%E7%BB%84%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84.png"><br>三维数组的物理结构：<br><img src="https://gitlab.com/autlight/pico/uploads/63fd64a09ed91a5f445376d272995d6c/%E4%B8%89%E7%BB%B4%E6%95%B0%E7%BB%84%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84.png"></li>
+</ol>
+<h1 id="操作数组"><a href="#操作数组" class="headerlink" title="操作数组"></a>操作数组</h1><h2 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h2><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><p>我们可以用for循环语句来遍历数组。首先，创建一个数组a，往里面放{1，2，3，4}就可以了:<br><code>int[] a = &#123;1,2,3,4&#125;;</code>接下来我们写一个for循环来输出数组a的每一个元素：<br><code>for(int i = 0;i &lt; 4;i++ )&#123;System.out.print(a[i])&#125;;</code><br>这条语句会输出数组a的每一个元素。</p>
+<blockquote>
+<p>也可以使用<code>.length</code>获得数组的元素个数。</p>
+<blockquote>
+<p><code>for(int i = 0;i &lt; a.length;i++ )&#123;System.out.print(a[i])&#125;;</code></p>
+</blockquote>
+</blockquote>
+<h3 id="for-each循环"><a href="#for-each循环" class="headerlink" title="for each循环"></a>for each循环</h3><p>用for each循环遍历数组a可以这么写：<br><code>for(int element : a)&#123;System.out.print(element)&#125;;</code><br>这条语句创建了一个int变量来暂存数组a的每一个元素，并循环输出它。</p>
+<h2 id="拷贝数组"><a href="#拷贝数组" class="headerlink" title="拷贝数组"></a>拷贝数组</h2><p>Java允许将一个数组的所有元素拷贝到另一个数组中去。可以这样写：<br><code>int[] a = &#123;1,2,3,4&#125;;</code><br><code>int[] b = Arrays.copyOf(a,1*a.length);</code><br>此时数组b的元素也是{1,2,3,4}。copyOf方法内第二个元素表示新数组的长度，我们可以用这个方法来增加数组长度。</p>
+<h2 id="排序数组"><a href="#排序数组" class="headerlink" title="排序数组"></a>排序数组</h2><p>可以使用Arrays类的sort方法对数值型数组快速排序：<br><code>int[] a = &#123;1,2,3,4&#125;;</code><br><code>Arrays.sort(a);</code></p>
+ 
       <!-- reward -->
       
     </div>

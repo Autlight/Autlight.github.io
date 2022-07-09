@@ -1,167 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java程序基本结构</title>
-    <url>/2022/06/27/Java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<h1 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h1><p>一个 Java 程序可以认为是一系列对象的集合，而这些对象通过调用彼此的方法来协同工作。下面简要介绍下类、对象、方法和实例变量的概念。</p>
-<ul>
-<li>对象：对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。</li>
-<li>类：类是一个模板，它描述一类对象的行为和状态。</li>
-<li>方法：方法就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</li>
-<li>实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定<span id="more"></span></li>
-</ul>
-<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p>编写 Java 程序时，应注意以下几点：</p>
-<ul>
-<li>使用<code>;</code>结尾：Java的每一行语句<strong>必须以分号<code>;</code>结束</strong>。</li>
-<li>大小写敏感：<strong>Java 是大小写敏感的</strong>，这就意味着标识符<code>Hello</code>与<code>hello</code>是不同的。</li>
-<li>类名：对于所有的类来说，<strong>类名的首字母应该大写</strong>。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如<code>MyFirstJavaClass</code>。</li>
-<li>方法名：所有的方法名都应该<strong>以小写字母开头</strong>。如果方法名含有若干单词，则后面的<strong>每个单词首字母大写</strong>。</li>
-<li>源文件名：源文件名<strong>必须和类名相同</strong>。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为<code>.java</code>。（如果文件名和类名不相同则会导致编译错误）。</li>
-<li>主方法入口：所有的 Java 程序由 public static void main(String[] args) 方法开始执行。即Java入口程序规定的方法<strong>必须是静态方法</strong>，方法名<strong>必须为main</strong>，括号内的参数<strong>必须是String数组</strong></li>
-</ul>
-<h1 id="Java-标识符"><a href="#Java-标识符" class="headerlink" title="Java 标识符"></a>Java 标识符</h1><p>Java 所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。</p>
-<p>关于 Java 标识符，有以下几点需要注意：</p>
-<ul>
-<li>所有的标识符都应该以字母（A-Z 或者 a-z）,美元符（$）、或者下划线（_）开始</li>
-<li>首字符之后可以是字母（A-Z 或者 a-z）,美元符（$）、下划线（_）或数字的任何字符组合</li>
-<li>关键字不能用作标识符</li>
-<li>标识符是大小写敏感的</li>
-<li>合法标识符举例：age、$salary、_value、__1_value</li>
-<li>非法标识符举例：123abc、-salary</li>
-</ul>
-<h1 id="Java修饰符"><a href="#Java修饰符" class="headerlink" title="Java修饰符"></a>Java修饰符</h1><p>像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符：</p>
-<ul>
-<li>问控制修饰符 : default, public , protected, private</li>
-<li>非访问控制修饰符 : final, abstract, static, synchronized</li>
-</ul>
-<h1 id="Java-关键字"><a href="#Java-关键字" class="headerlink" title="Java 关键字"></a>Java 关键字</h1><p>下面列出了 Java 关键字。这些保留字不能用于常量、变量、和任何标识符的名称。<br><img src="https://gitlab.com/autlight/pico/uploads/07fcfbb37632c4163af202a6b42a56b2/%E5%85%B3%E9%94%AE%E5%AD%97%E8%A1%A8.jpg" alt="关键字表"></p>
-<blockquote>
-<p>Java 的 null 不是关键字，类似于 true 和 false，它是一个字面常量，不允许作为标识符使用。</p>
-</blockquote>
-<h1 id="基本结构的分析"><a href="#基本结构的分析" class="headerlink" title="基本结构的分析"></a>基本结构的分析</h1><pre><code>/**
-* 这是一个可以用来自动创建文档的注释
-*/
-public class Hello &#123;
-    public static void main(String[] args) &#123;
-        // 向屏幕输出文本:
-        System.out.println(&quot;Hello, world!&quot;);
-        /* 多行注释开始
-        注释内容
-        注释结束 */
-    &#125;
-&#125; // class定义结束
-</code></pre>
-<p>这是一个基本的Java程序，它的任务是向屏幕输出Hello world！以这个程序为例，我们可以研究Java程序的基本结构。<br>首先，Java是一个<strong>面向对象</strong>的语言，它的基本单位就是<strong>类</strong><code>class</code>。在这个程序里面关键字<code>class</code>定义了一个类，它的名字叫<code>Hello</code>。另外<code>public</code>是一个<strong>访问修饰符</strong>，它表示<code>Hello</code>这个类是公开的。</p>
-<p>在<code>Hello</code>类内部，即<code>&#123;&#125;</code>当中的内容定义了一个<code>main</code><strong>方法（method）</strong>，方法内部的语句会<strong>依次执行</strong>。<br>同样，修饰符<code>public</code>表示<code>mian</code>方法是公开的，另一个修饰符<code>static</code>表示<code>main</code>是一个<strong>静态方法</strong>，而<strong>关键字void</strong>表示则返回值，意为<strong>没有任何返回值</strong>。</p>
-<blockquote>
-<p><code>public</code>除了修饰类，还可以修饰方法。</p>
-</blockquote>
-<p>在Java程序中，注释是一种给人阅读的文本，不是程序的一部分，所以编译器会自动忽略注释。</p>
-<p>Java有3种注释，第一种是<strong>单行注释</strong>，以双斜线开头，直到这一行的结尾结束：</p>
-<pre><code>// 这是注释...
-</code></pre>
-<p>而多行注释以&#x2F;<em>星号开头，以</em>&#x2F;结束：</p>
-<pre><code>/*
-这是注释
-blablabla...
-这也是注释
-*/
-</code></pre>
-<p>还有一种特殊的多行注释，以&#x2F;*<em>开头，以</em>&#x2F;结束，如果有多行，每行通常以星号开头：</p>
-<pre><code>/**
-* 可以用来自动创建文档的注释
-* 
-* @auther liaoxuefeng
-*/
-</code></pre>
-<p>这种特殊的多行注释需要<strong>写在类和方法的定义处</strong>，可以用于自动创建文档。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>JavaSE</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>JavaSE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>markdown基础语法</title>
-    <url>/2022/06/28/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。本文也使用markdown语法编写。</p>
-<hr>
-<span id="more"></span>
-
-<h2 id="markdown基本语法"><a href="#markdown基本语法" class="headerlink" title="markdown基本语法"></a>markdown基本语法</h2><h3 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h3><h4 id="创建标题"><a href="#创建标题" class="headerlink" title="创建标题"></a>创建标题</h4><p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (&lt;h3&gt;)<br>写法：<br><code>### 这是一个三级标题的实例</code><br>效果：</p>
-<h3 id="这是一个三级标题的实例"><a href="#这是一个三级标题的实例" class="headerlink" title="这是一个三级标题的实例"></a>这是一个三级标题的实例</h3><blockquote>
-<p>Tips:<br>也可以在短语下面用任意数量的“&#x3D;&#x3D;”来表示一级标题，二级标题用“–”。<br>不同的 Markdown 应用程序处理 # 和标题之间的空格方式并不一致。兼容考虑，<strong>用一个空格在 # 和标题之间进行分隔最为常用。</strong></p>
-</blockquote>
-<h3 id="段落语法"><a href="#段落语法" class="headerlink" title="段落语法"></a>段落语法</h3><h4 id="创建段落"><a href="#创建段落" class="headerlink" title="创建段落"></a>创建段落</h4><p>用空白行将一行或多行文本进行分隔来创建段落。<br><strong>不要用tab或者空格键进位。</strong></p>
-<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行<code>&lt;br&gt;</code>。</p>
-<blockquote>
-<p>Tips:<br>几乎每个 Markdown 应用程序都支持两个或多个空格进行换行，称为 结尾空格（trailing whitespace) 的方式，但这是有争议的，因为很难在编辑器中直接看到空格，并且很多人在每个句子后面都会有意或无意地添加两个空格。由于这个原因，你可能要使用除结尾空格以外的其它方式来换行。幸运的是，几乎每个 Markdown 应用程序都支持另一种换行方式:HTML的 <code>&lt;br&gt; </code>标签。<strong>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <code>&lt;br&gt;</code> 标签来实现换行。</strong><br>还有两种其他方式并不推荐使用。CommonMark 和其它几种轻量级标记语言支持在行尾添加反斜杠 () 的方式实现换行，但是并非所有 Markdown 应用程序都支持此种方式，因此从兼容性的角度来看，不推荐使用。并且至少有两种轻量级标记语言支持无须在行尾添加任何内容，只须键入回车键（return）即可实现换行。</p>
-</blockquote>
-<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><h4 id="粗体（Bold）"><a href="#粗体（Bold）" class="headerlink" title="粗体（Bold）"></a>粗体（Bold）</h4><p>要加粗文本，请在单词或短语的前后各<strong>添加两个星号（asterisks）或下划线（underscores）。</strong>如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。<br>写法<br><code>**这是一个粗体实例。**</code><br>效果：<br><strong>这是一个粗体实例。</strong></p>
-<blockquote>
-<p>Tips:<br>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号（asterisks）。</p>
-</blockquote>
-<h4 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h4><p>要用斜体显示文本，请在单词或短语前后<strong>添加一个星号（asterisk）或下划线（underscore）。</strong>要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。<br>写法：<br><code>*这是一个斜体实例。*</code><br>效果：<br><em>这是一个斜体实例。</em></p>
-<h4 id="粗体（Bold）和斜体（Italic）"><a href="#粗体（Bold）和斜体（Italic）" class="headerlink" title="粗体（Bold）和斜体（Italic）"></a>粗体（Bold）和斜体（Italic）</h4><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。<br>写法：<br><code>***这是一个加粗并斜体的实例。***</code><br>效果：<br><em><strong>这是一个加粗并斜体的实例。</strong></em></p>
-<blockquote>
-<p>Tips:<br>Markdown 应用程序在处理单词或短语中间添加的下划线上并不一致。为了实现兼容性，请使用星号将单词或短语的中间部分加粗并以斜体显示，以示重要。</p>
-</blockquote>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>要创建块引用，请在段落前添加一个 &gt; 符号。<br>eg：<br><code>&gt; 这是一个引用实例。</code><br>效果：</p>
-<blockquote>
-<p>这是一个引用实例。</p>
-</blockquote>
-<h4 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h4><p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。<br>写法:<br>&gt;这是第一条引用。<br>&gt;<br>&gt;<br>&gt;这是第二条引用。<br>效果：</p>
-<blockquote>
-<p>这是第一条引用。</p>
-<p>这是第二条引用。</p>
-</blockquote>
-<h4 id="嵌套块引用"><a href="#嵌套块引用" class="headerlink" title="嵌套块引用"></a>嵌套块引用</h4><p>块引用可以嵌套。在要嵌套的段落前添加一个 &gt;&gt; 符号。<br>写法：<br>&gt;这是第一条引用。<br>&gt;<br>&gt;这是第二条引用。<br>&gt;&gt;这是第二条的第一个引用。<br>效果：</p>
-<blockquote>
-<p>这是第一条引用。</p>
-<p>这是第二条引用。</p>
-<blockquote>
-<p>这是第二条的第一个引用。</p>
-</blockquote>
-</blockquote>
-<h4 id="带有其它元素的块引用"><a href="#带有其它元素的块引用" class="headerlink" title="带有其它元素的块引用"></a>带有其它元素的块引用</h4><p>块引用可以包含其他 Markdown 格式的元素。但并非所有元素都可以使用。</p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。<br>写法：<br>1.这是第一条。<br>2.这是第二条。<br>3.这是第三条。<br>效果：<br>（没啥变化，就不写了）</p>
-<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。<br>写法：<br>-这是第一条。<br>-这是第二条。<br>-这是第三条<br>效果：<br>（还是没啥变化）</p>
-<h4 id="在列表中嵌套其他元素"><a href="#在列表中嵌套其他元素" class="headerlink" title="在列表中嵌套其他元素"></a>在列表中嵌套其他元素</h4><p>要在保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符。</p>
-<h3 id="代码语法"><a href="#代码语法" class="headerlink" title="代码语法"></a>代码语法</h3><h4 id="创建代码"><a href="#创建代码" class="headerlink" title="创建代码"></a>创建代码</h4><p>要将单词或短语表示为代码，请将其包裹在反引号 (&#96;) 中</p>
-<h4 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h4><p>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(&#96;&#96;)中。</p>
-<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。</p>
-<h4 id="Markdown-围栏代码块"><a href="#Markdown-围栏代码块" class="headerlink" title="Markdown 围栏代码块"></a>Markdown 围栏代码块</h4><p>Markdown基本语法允许通过将行缩进四个空格或一个制表符来创建代码块。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（&#96;&#96;&#96;）或三个波浪号（~~~）。</p>
-<p>写法：<br>`&#96;&#96;<br>System.out.print(“这是一个围栏代码块的实例”);<br>`&#96;&#96;<br>效果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">System.out.print(&quot;这是一个围栏代码块的实例&quot;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。<br>写法：<br><code>---</code><br>效果：</p>
-<hr>
-<h3 id="链接语法"><a href="#链接语法" class="headerlink" title="链接语法"></a>链接语法</h3><h4 id="创建链接"><a href="#创建链接" class="headerlink" title="创建链接"></a>创建链接</h4><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。<br>超链接Markdown语法代码：<code>[超链接显示名](超链接地址)</code><br>我的网站代码：<a href="autlight.cn">秋光的网站</a></p>
-<h4 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h4><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。<br><code>这是一个链接 [秋光的网站](autlight。cn &quot;太牛了&quot;)。</code><br>我的网站代码：<a href="autlight.cn" title="太牛了">秋光的网站</a></p>
-<h4 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h4><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接</p>
-<h4 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h4><p>强调链接, 在链接语法前后增加星号。<br>要将链接表示为代码，在方括号中添加反引号。</p>
-<h4 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h4><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。<br><a href="autlight.cn">秋光的网站</a></p>
-<h5 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h5><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。<br><code>[秋光的网站][1]</code><br>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
-<h5 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式</h5><p>引用类型链接的第二部分使用以下属性设置格式：<br>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如[label]:）。<br>链接的URL，可以选择将其括在尖括号中。<br>链接的可选标题，可以将其括在双引号，单引号或括号中。<br><code>[1]: autlight.cn</code></p>
-<h3 id="图片语法"><a href="#图片语法" class="headerlink" title="图片语法"></a>图片语法</h3><h4 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h4><p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
-<h4 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h4><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。<br>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code>。</p>
-<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
-<h3 id="内嵌HTML标签"><a href="#内嵌HTML标签" class="headerlink" title="内嵌HTML标签"></a>内嵌HTML标签</h3><p>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需将 HTML 标签添加到 Markdown 文本中即可。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java数据类型和变量</title>
     <url>/2022/06/29/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><ul>
@@ -267,6 +106,167 @@ blablabla...
       </tags>
   </entry>
   <entry>
+    <title>Java程序基本结构</title>
+    <url>/2022/06/27/Java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h1 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h1><p>一个 Java 程序可以认为是一系列对象的集合，而这些对象通过调用彼此的方法来协同工作。下面简要介绍下类、对象、方法和实例变量的概念。</p>
+<ul>
+<li>对象：对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。</li>
+<li>类：类是一个模板，它描述一类对象的行为和状态。</li>
+<li>方法：方法就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</li>
+<li>实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定<span id="more"></span></li>
+</ul>
+<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><p>编写 Java 程序时，应注意以下几点：</p>
+<ul>
+<li>使用<code>;</code>结尾：Java的每一行语句<strong>必须以分号<code>;</code>结束</strong>。</li>
+<li>大小写敏感：<strong>Java 是大小写敏感的</strong>，这就意味着标识符<code>Hello</code>与<code>hello</code>是不同的。</li>
+<li>类名：对于所有的类来说，<strong>类名的首字母应该大写</strong>。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如<code>MyFirstJavaClass</code>。</li>
+<li>方法名：所有的方法名都应该<strong>以小写字母开头</strong>。如果方法名含有若干单词，则后面的<strong>每个单词首字母大写</strong>。</li>
+<li>源文件名：源文件名<strong>必须和类名相同</strong>。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为<code>.java</code>。（如果文件名和类名不相同则会导致编译错误）。</li>
+<li>主方法入口：所有的 Java 程序由 public static void main(String[] args) 方法开始执行。即Java入口程序规定的方法<strong>必须是静态方法</strong>，方法名<strong>必须为main</strong>，括号内的参数<strong>必须是String数组</strong></li>
+</ul>
+<h1 id="Java-标识符"><a href="#Java-标识符" class="headerlink" title="Java 标识符"></a>Java 标识符</h1><p>Java 所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。</p>
+<p>关于 Java 标识符，有以下几点需要注意：</p>
+<ul>
+<li>所有的标识符都应该以字母（A-Z 或者 a-z）,美元符（$）、或者下划线（_）开始</li>
+<li>首字符之后可以是字母（A-Z 或者 a-z）,美元符（$）、下划线（_）或数字的任何字符组合</li>
+<li>关键字不能用作标识符</li>
+<li>标识符是大小写敏感的</li>
+<li>合法标识符举例：age、$salary、_value、__1_value</li>
+<li>非法标识符举例：123abc、-salary</li>
+</ul>
+<h1 id="Java修饰符"><a href="#Java修饰符" class="headerlink" title="Java修饰符"></a>Java修饰符</h1><p>像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符：</p>
+<ul>
+<li>问控制修饰符 : default, public , protected, private</li>
+<li>非访问控制修饰符 : final, abstract, static, synchronized</li>
+</ul>
+<h1 id="Java-关键字"><a href="#Java-关键字" class="headerlink" title="Java 关键字"></a>Java 关键字</h1><p>下面列出了 Java 关键字。这些保留字不能用于常量、变量、和任何标识符的名称。<br><img src="https://gitlab.com/autlight/pico/uploads/07fcfbb37632c4163af202a6b42a56b2/%E5%85%B3%E9%94%AE%E5%AD%97%E8%A1%A8.jpg" alt="关键字表"></p>
+<blockquote>
+<p>Java 的 null 不是关键字，类似于 true 和 false，它是一个字面常量，不允许作为标识符使用。</p>
+</blockquote>
+<h1 id="基本结构的分析"><a href="#基本结构的分析" class="headerlink" title="基本结构的分析"></a>基本结构的分析</h1><pre><code>/**
+* 这是一个可以用来自动创建文档的注释
+*/
+public class Hello &#123;
+    public static void main(String[] args) &#123;
+        // 向屏幕输出文本:
+        System.out.println(&quot;Hello, world!&quot;);
+        /* 多行注释开始
+        注释内容
+        注释结束 */
+    &#125;
+&#125; // class定义结束
+</code></pre>
+<p>这是一个基本的Java程序，它的任务是向屏幕输出Hello world！以这个程序为例，我们可以研究Java程序的基本结构。<br>首先，Java是一个<strong>面向对象</strong>的语言，它的基本单位就是<strong>类</strong><code>class</code>。在这个程序里面关键字<code>class</code>定义了一个类，它的名字叫<code>Hello</code>。另外<code>public</code>是一个<strong>访问修饰符</strong>，它表示<code>Hello</code>这个类是公开的。</p>
+<p>在<code>Hello</code>类内部，即<code>&#123;&#125;</code>当中的内容定义了一个<code>main</code><strong>方法（method）</strong>，方法内部的语句会<strong>依次执行</strong>。<br>同样，修饰符<code>public</code>表示<code>mian</code>方法是公开的，另一个修饰符<code>static</code>表示<code>main</code>是一个<strong>静态方法</strong>，而<strong>关键字void</strong>表示则返回值，意为<strong>没有任何返回值</strong>。</p>
+<blockquote>
+<p><code>public</code>除了修饰类，还可以修饰方法。</p>
+</blockquote>
+<p>在Java程序中，注释是一种给人阅读的文本，不是程序的一部分，所以编译器会自动忽略注释。</p>
+<p>Java有3种注释，第一种是<strong>单行注释</strong>，以双斜线开头，直到这一行的结尾结束：</p>
+<pre><code>// 这是注释...
+</code></pre>
+<p>而多行注释以&#x2F;<em>星号开头，以</em>&#x2F;结束：</p>
+<pre><code>/*
+这是注释
+blablabla...
+这也是注释
+*/
+</code></pre>
+<p>还有一种特殊的多行注释，以&#x2F;*<em>开头，以</em>&#x2F;结束，如果有多行，每行通常以星号开头：</p>
+<pre><code>/**
+* 可以用来自动创建文档的注释
+* 
+* @auther liaoxuefeng
+*/
+</code></pre>
+<p>这种特殊的多行注释需要<strong>写在类和方法的定义处</strong>，可以用于自动创建文档。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>JavaSE</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown基础语法</title>
+    <url>/2022/06/28/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。本文也使用markdown语法编写。</p>
+<hr>
+<span id="more"></span>
+
+<h2 id="markdown基本语法"><a href="#markdown基本语法" class="headerlink" title="markdown基本语法"></a>markdown基本语法</h2><h3 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h3><h4 id="创建标题"><a href="#创建标题" class="headerlink" title="创建标题"></a>创建标题</h4><p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (&lt;h3&gt;)<br>写法：<br><code>### 这是一个三级标题的实例</code><br>效果：</p>
+<h3 id="这是一个三级标题的实例"><a href="#这是一个三级标题的实例" class="headerlink" title="这是一个三级标题的实例"></a>这是一个三级标题的实例</h3><blockquote>
+<p>Tips:<br>也可以在短语下面用任意数量的“&#x3D;&#x3D;”来表示一级标题，二级标题用“–”。<br>不同的 Markdown 应用程序处理 # 和标题之间的空格方式并不一致。兼容考虑，<strong>用一个空格在 # 和标题之间进行分隔最为常用。</strong></p>
+</blockquote>
+<h3 id="段落语法"><a href="#段落语法" class="headerlink" title="段落语法"></a>段落语法</h3><h4 id="创建段落"><a href="#创建段落" class="headerlink" title="创建段落"></a>创建段落</h4><p>用空白行将一行或多行文本进行分隔来创建段落。<br><strong>不要用tab或者空格键进位。</strong></p>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行<code>&lt;br&gt;</code>。</p>
+<blockquote>
+<p>Tips:<br>几乎每个 Markdown 应用程序都支持两个或多个空格进行换行，称为 结尾空格（trailing whitespace) 的方式，但这是有争议的，因为很难在编辑器中直接看到空格，并且很多人在每个句子后面都会有意或无意地添加两个空格。由于这个原因，你可能要使用除结尾空格以外的其它方式来换行。幸运的是，几乎每个 Markdown 应用程序都支持另一种换行方式:HTML的 <code>&lt;br&gt; </code>标签。<strong>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <code>&lt;br&gt;</code> 标签来实现换行。</strong><br>还有两种其他方式并不推荐使用。CommonMark 和其它几种轻量级标记语言支持在行尾添加反斜杠 () 的方式实现换行，但是并非所有 Markdown 应用程序都支持此种方式，因此从兼容性的角度来看，不推荐使用。并且至少有两种轻量级标记语言支持无须在行尾添加任何内容，只须键入回车键（return）即可实现换行。</p>
+</blockquote>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><h4 id="粗体（Bold）"><a href="#粗体（Bold）" class="headerlink" title="粗体（Bold）"></a>粗体（Bold）</h4><p>要加粗文本，请在单词或短语的前后各<strong>添加两个星号（asterisks）或下划线（underscores）。</strong>如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。<br>写法<br><code>**这是一个粗体实例。**</code><br>效果：<br><strong>这是一个粗体实例。</strong></p>
+<blockquote>
+<p>Tips:<br>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号（asterisks）。</p>
+</blockquote>
+<h4 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h4><p>要用斜体显示文本，请在单词或短语前后<strong>添加一个星号（asterisk）或下划线（underscore）。</strong>要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。<br>写法：<br><code>*这是一个斜体实例。*</code><br>效果：<br><em>这是一个斜体实例。</em></p>
+<h4 id="粗体（Bold）和斜体（Italic）"><a href="#粗体（Bold）和斜体（Italic）" class="headerlink" title="粗体（Bold）和斜体（Italic）"></a>粗体（Bold）和斜体（Italic）</h4><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。<br>写法：<br><code>***这是一个加粗并斜体的实例。***</code><br>效果：<br><em><strong>这是一个加粗并斜体的实例。</strong></em></p>
+<blockquote>
+<p>Tips:<br>Markdown 应用程序在处理单词或短语中间添加的下划线上并不一致。为了实现兼容性，请使用星号将单词或短语的中间部分加粗并以斜体显示，以示重要。</p>
+</blockquote>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>要创建块引用，请在段落前添加一个 &gt; 符号。<br>eg：<br><code>&gt; 这是一个引用实例。</code><br>效果：</p>
+<blockquote>
+<p>这是一个引用实例。</p>
+</blockquote>
+<h4 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h4><p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。<br>写法:<br>&gt;这是第一条引用。<br>&gt;<br>&gt;<br>&gt;这是第二条引用。<br>效果：</p>
+<blockquote>
+<p>这是第一条引用。</p>
+<p>这是第二条引用。</p>
+</blockquote>
+<h4 id="嵌套块引用"><a href="#嵌套块引用" class="headerlink" title="嵌套块引用"></a>嵌套块引用</h4><p>块引用可以嵌套。在要嵌套的段落前添加一个 &gt;&gt; 符号。<br>写法：<br>&gt;这是第一条引用。<br>&gt;<br>&gt;这是第二条引用。<br>&gt;&gt;这是第二条的第一个引用。<br>效果：</p>
+<blockquote>
+<p>这是第一条引用。</p>
+<p>这是第二条引用。</p>
+<blockquote>
+<p>这是第二条的第一个引用。</p>
+</blockquote>
+</blockquote>
+<h4 id="带有其它元素的块引用"><a href="#带有其它元素的块引用" class="headerlink" title="带有其它元素的块引用"></a>带有其它元素的块引用</h4><p>块引用可以包含其他 Markdown 格式的元素。但并非所有元素都可以使用。</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。<br>写法：<br>1.这是第一条。<br>2.这是第二条。<br>3.这是第三条。<br>效果：<br>（没啥变化，就不写了）</p>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。<br>写法：<br>-这是第一条。<br>-这是第二条。<br>-这是第三条<br>效果：<br>（还是没啥变化）</p>
+<h4 id="在列表中嵌套其他元素"><a href="#在列表中嵌套其他元素" class="headerlink" title="在列表中嵌套其他元素"></a>在列表中嵌套其他元素</h4><p>要在保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符。</p>
+<h3 id="代码语法"><a href="#代码语法" class="headerlink" title="代码语法"></a>代码语法</h3><h4 id="创建代码"><a href="#创建代码" class="headerlink" title="创建代码"></a>创建代码</h4><p>要将单词或短语表示为代码，请将其包裹在反引号 (&#96;) 中</p>
+<h4 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h4><p>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(&#96;&#96;)中。</p>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。</p>
+<h4 id="Markdown-围栏代码块"><a href="#Markdown-围栏代码块" class="headerlink" title="Markdown 围栏代码块"></a>Markdown 围栏代码块</h4><p>Markdown基本语法允许通过将行缩进四个空格或一个制表符来创建代码块。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（&#96;&#96;&#96;）或三个波浪号（~~~）。</p>
+<p>写法：<br>`&#96;&#96;<br>System.out.print(“这是一个围栏代码块的实例”);<br>`&#96;&#96;<br>效果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">System.out.print(&quot;这是一个围栏代码块的实例&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。<br>写法：<br><code>---</code><br>效果：</p>
+<hr>
+<h3 id="链接语法"><a href="#链接语法" class="headerlink" title="链接语法"></a>链接语法</h3><h4 id="创建链接"><a href="#创建链接" class="headerlink" title="创建链接"></a>创建链接</h4><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。<br>超链接Markdown语法代码：<code>[超链接显示名](超链接地址)</code><br>我的网站代码：<a href="autlight.cn">秋光的网站</a></p>
+<h4 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h4><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。<br><code>这是一个链接 [秋光的网站](autlight。cn &quot;太牛了&quot;)。</code><br>我的网站代码：<a href="autlight.cn" title="太牛了">秋光的网站</a></p>
+<h4 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h4><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接</p>
+<h4 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h4><p>强调链接, 在链接语法前后增加星号。<br>要将链接表示为代码，在方括号中添加反引号。</p>
+<h4 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h4><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。<br><a href="autlight.cn">秋光的网站</a></p>
+<h5 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h5><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。<br><code>[秋光的网站][1]</code><br>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
+<h5 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式</h5><p>引用类型链接的第二部分使用以下属性设置格式：<br>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如[label]:）。<br>链接的URL，可以选择将其括在尖括号中。<br>链接的可选标题，可以将其括在双引号，单引号或括号中。<br><code>[1]: autlight.cn</code></p>
+<h3 id="图片语法"><a href="#图片语法" class="headerlink" title="图片语法"></a>图片语法</h3><h4 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h4><p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<h4 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h4><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。<br>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code>。</p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
+<h3 id="内嵌HTML标签"><a href="#内嵌HTML标签" class="headerlink" title="内嵌HTML标签"></a>内嵌HTML标签</h3><p>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需将 HTML 标签添加到 Markdown 文本中即可。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数组</title>
     <url>/2022/07/08/%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<p><strong>数组是一种容器（放东西的东西），容器里面的东西叫做元素或者单元。我们可以把数组理解为变量的集合。</strong><br><img src="https://gitlab.com/autlight/pico/uploads/0d51a819ab4790fd2cefe13fda6e5ccb/%E6%95%B0%E7%BB%84.png" alt="数组示意图"><br>如图，我们可以这么理解数组的概念：一个数组就好比一个抽屉，里面放了很多贴着标签（索引）的小盒子（元素），每个小盒子里面放一张写着东西的卡片（数据）。我们要寻找哪张卡片只要打开对应标签的盒子就可以了。我们我们可以把不同类型的数组看成不同形状的抽屉，当我们创建一个整数类型的数组时，相当于打开一个正方形抽屉，只有里面同样是正方形盒子的时候才能装满它。也就是说，一个数组里的所有元素必须和数组本身是同一类型。同样，当我们打开一个抽屉的时候，它能放下多少小盒子已经是确定的。也就是说，数组的长度（元素容量）被创建后就不能改变了。</p>
@@ -282,18 +282,33 @@ blablabla...
 <li>还有一种写法可以用于我们已知数组元素时创建数组。比如，我们已知一个整型数组<code>b</code>元素为<code>&#123;1，2，3，4&#125;</code>可以这样写:<code>int[] b = &#123;1,2,3,4&#125;;</code>我们可以在最后一个值后面随意添加值，反正我们都没有指定数组长度，只要每个值之间用<code>,</code>隔开就好了。</li>
 </ul>
 <h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><p>多维数组使用多个下标访问数组元素，一般用来表示表格或者更复杂的排列形式。</p>
+<ol>
+<li><strong>二维数组</strong> 其实Java语言并没有真正的多维数组，它只有一维数组，但是可以通过两个索引或者更多索引来表示维度。<br>比如要创建一个int类型的二维数组c我们可以这样写<code>int[][] c = new int[3][4]; </code>这就表示创建一个三行四列的一个表（如下图），同样，用关键字<code>new</code>创建的int数组元素默认为0。<br><img src="https://gitlab.com/autlight/pico/uploads/bf38148257fdf20eb3a1a2020dd46061/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84.png" alt="二维数组"></li>
+</ol>
 <ul>
-<li>其实Java语言并没有真正的多维数组，它只有一维数组，但是可以通过两个索引或者更多索引来表示维度。<br>比如要创建一个int类型的二维数组c我们可以这样写<code>int[][] c = new int[3][4]; </code>这就表示创建一个三行四列的一个表（如下图），同样，用关键字<code>new</code>创建的int数组元素默认为0。<br><img src="https://gitlab.com/autlight/pico/uploads/bf38148257fdf20eb3a1a2020dd46061/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84.png" alt="二维数组"></li>
 <li>同样当我们已知数组元素时可以采用另一种写法<code>int[][] d = &#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;,&#123;7,8,9&#125;&#125;</code>这表示我们创建了一个三行三列的表d。</li>
 </ul>
-<h2 id="匿名数组"><a href="#匿名数组" class="headerlink" title="匿名数组"></a>匿名数组</h2><h1 id="操作数组"><a href="#操作数组" class="headerlink" title="操作数组"></a>操作数组</h1>]]></content>
+<ol start="2">
+<li><strong>三维数组或更多维</strong>原理和创建方法同二维数组，这里贴两张图方便理解<br>三维数组的逻辑结构：<br><img src="https://gitlab.com/autlight/pico/uploads/736b671d5b17dd4d0ee92c78fc69a454/%E4%B8%89%E7%BB%B4%E6%95%B0%E7%BB%84%E9%80%BB%E8%BE%91%E7%BB%93%E6%9E%84.png"><br>三维数组的物理结构：<br><img src="https://gitlab.com/autlight/pico/uploads/63fd64a09ed91a5f445376d272995d6c/%E4%B8%89%E7%BB%B4%E6%95%B0%E7%BB%84%E7%89%A9%E7%90%86%E7%BB%93%E6%9E%84.png"></li>
+</ol>
+<h1 id="操作数组"><a href="#操作数组" class="headerlink" title="操作数组"></a>操作数组</h1><h2 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h2><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><p>我们可以用for循环语句来遍历数组。首先，创建一个数组a，往里面放{1，2，3，4}就可以了:<br><code>int[] a = &#123;1,2,3,4&#125;;</code>接下来我们写一个for循环来输出数组a的每一个元素：<br><code>for(int i = 0;i &lt; 4;i++ )&#123;System.out.print(a[i])&#125;;</code><br>这条语句会输出数组a的每一个元素。</p>
+<blockquote>
+<p>也可以使用<code>.length</code>获得数组的元素个数。</p>
+<blockquote>
+<p><code>for(int i = 0;i &lt; a.length;i++ )&#123;System.out.print(a[i])&#125;;</code></p>
+</blockquote>
+</blockquote>
+<h3 id="for-each循环"><a href="#for-each循环" class="headerlink" title="for each循环"></a>for each循环</h3><p>用for each循环遍历数组a可以这么写：<br><code>for(int element : a)&#123;System.out.print(element)&#125;;</code><br>这条语句创建了一个int变量来暂存数组a的每一个元素，并循环输出它。</p>
+<h2 id="拷贝数组"><a href="#拷贝数组" class="headerlink" title="拷贝数组"></a>拷贝数组</h2><p>Java允许将一个数组的所有元素拷贝到另一个数组中去。可以这样写：<br><code>int[] a = &#123;1,2,3,4&#125;;</code><br><code>int[] b = Arrays.copyOf(a,1*a.length);</code><br>此时数组b的元素也是{1,2,3,4}。copyOf方法内第二个元素表示新数组的长度，我们可以用这个方法来增加数组长度。</p>
+<h2 id="排序数组"><a href="#排序数组" class="headerlink" title="排序数组"></a>排序数组</h2><p>可以使用Arrays类的sort方法对数值型数组快速排序：<br><code>int[] a = &#123;1,2,3,4&#125;;</code><br><code>Arrays.sort(a);</code></p>
+]]></content>
       <categories>
         <category>笔记</category>
         <category>JavaSE</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>JavaSE</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
 </search>

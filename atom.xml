@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-07-08T15:24:56.769Z</updated>
+  <updated>2022-07-09T13:55:46.986Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/07/08/%E6%95%B0%E7%BB%84/"/>
     <id>http://example.com/2022/07/08/%E6%95%B0%E7%BB%84/</id>
     <published>2022-07-08T12:05:10.000Z</published>
-    <updated>2022-07-08T15:24:56.769Z</updated>
+    <updated>2022-07-09T13:55:46.986Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;strong&gt;数组是一种容器（放东西的东西），容器里面的东西叫做元素或者单元。我们可以把数组理解为变量的集合。&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://gitlab.com/autlight/pico/uploads/0d51a819ab4790fd2cefe13fda6e5ccb/%E6%95%B0%E7%BB%84.png&quot; alt=&quot;数组示意图&quot;&gt;&lt;br&gt;如图，我们可以这么理解数组的概念：一个数组就好比一个抽屉，里面放了很多贴着标签（索引）的小盒子（元素），每个小盒子里面放一张写着东西的卡片（数据）。我们要寻找哪张卡片只要打开对应标签的盒子就可以了。我们我们可以把不同类型的数组看成不同形状的抽屉，当我们创建一个整数类型的数组时，相当于打开一个正方形抽屉，只有里面同样是正方形盒子的时候才能装满它。也就是说，一个数组里的所有元素必须和数组本身是同一类型。同样，当我们打开一个抽屉的时候，它能放下多少小盒子已经是确定的。也就是说，数组的长度（元素容量）被创建后就不能改变了。&lt;/p&gt;
@@ -34,9 +34,9 @@
     <category term="JavaSE" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/JavaSE/"/>
     
     
-    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
+    
+    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -108,9 +108,9 @@
     <category term="JavaSE" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/JavaSE/"/>
     
     
-    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
+    
+    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
