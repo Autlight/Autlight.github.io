@@ -86,6 +86,82 @@ blablabla...
       </tags>
   </entry>
   <entry>
+    <title>markdown基础语法</title>
+    <url>/2022/06/28/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。本文也使用markdown语法编写。</p>
+<hr>
+<span id="more"></span>
+
+<h2 id="markdown基本语法"><a href="#markdown基本语法" class="headerlink" title="markdown基本语法"></a>markdown基本语法</h2><h3 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h3><h4 id="创建标题"><a href="#创建标题" class="headerlink" title="创建标题"></a>创建标题</h4><p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (&lt;h3&gt;)<br>写法：<br><code>### 这是一个三级标题的实例</code><br>效果：</p>
+<h3 id="这是一个三级标题的实例"><a href="#这是一个三级标题的实例" class="headerlink" title="这是一个三级标题的实例"></a>这是一个三级标题的实例</h3><blockquote>
+<p>Tips:<br>也可以在短语下面用任意数量的“&#x3D;&#x3D;”来表示一级标题，二级标题用“–”。<br>不同的 Markdown 应用程序处理 # 和标题之间的空格方式并不一致。兼容考虑，<strong>用一个空格在 # 和标题之间进行分隔最为常用。</strong></p>
+</blockquote>
+<h3 id="段落语法"><a href="#段落语法" class="headerlink" title="段落语法"></a>段落语法</h3><h4 id="创建段落"><a href="#创建段落" class="headerlink" title="创建段落"></a>创建段落</h4><p>用空白行将一行或多行文本进行分隔来创建段落。<br><strong>不要用tab或者空格键进位。</strong></p>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行<code>&lt;br&gt;</code>。</p>
+<blockquote>
+<p>Tips:<br>几乎每个 Markdown 应用程序都支持两个或多个空格进行换行，称为 结尾空格（trailing whitespace) 的方式，但这是有争议的，因为很难在编辑器中直接看到空格，并且很多人在每个句子后面都会有意或无意地添加两个空格。由于这个原因，你可能要使用除结尾空格以外的其它方式来换行。幸运的是，几乎每个 Markdown 应用程序都支持另一种换行方式:HTML的 <code>&lt;br&gt; </code>标签。<strong>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <code>&lt;br&gt;</code> 标签来实现换行。</strong><br>还有两种其他方式并不推荐使用。CommonMark 和其它几种轻量级标记语言支持在行尾添加反斜杠 () 的方式实现换行，但是并非所有 Markdown 应用程序都支持此种方式，因此从兼容性的角度来看，不推荐使用。并且至少有两种轻量级标记语言支持无须在行尾添加任何内容，只须键入回车键（return）即可实现换行。</p>
+</blockquote>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><h4 id="粗体（Bold）"><a href="#粗体（Bold）" class="headerlink" title="粗体（Bold）"></a>粗体（Bold）</h4><p>要加粗文本，请在单词或短语的前后各<strong>添加两个星号（asterisks）或下划线（underscores）。</strong>如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。<br>写法<br><code>**这是一个粗体实例。**</code><br>效果：<br><strong>这是一个粗体实例。</strong></p>
+<blockquote>
+<p>Tips:<br>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号（asterisks）。</p>
+</blockquote>
+<h4 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h4><p>要用斜体显示文本，请在单词或短语前后<strong>添加一个星号（asterisk）或下划线（underscore）。</strong>要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。<br>写法：<br><code>*这是一个斜体实例。*</code><br>效果：<br><em>这是一个斜体实例。</em></p>
+<h4 id="粗体（Bold）和斜体（Italic）"><a href="#粗体（Bold）和斜体（Italic）" class="headerlink" title="粗体（Bold）和斜体（Italic）"></a>粗体（Bold）和斜体（Italic）</h4><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。<br>写法：<br><code>***这是一个加粗并斜体的实例。***</code><br>效果：<br><em><strong>这是一个加粗并斜体的实例。</strong></em></p>
+<blockquote>
+<p>Tips:<br>Markdown 应用程序在处理单词或短语中间添加的下划线上并不一致。为了实现兼容性，请使用星号将单词或短语的中间部分加粗并以斜体显示，以示重要。</p>
+</blockquote>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>要创建块引用，请在段落前添加一个 &gt; 符号。<br>eg：<br><code>&gt; 这是一个引用实例。</code><br>效果：</p>
+<blockquote>
+<p>这是一个引用实例。</p>
+</blockquote>
+<h4 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h4><p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。<br>写法:<br>&gt;这是第一条引用。<br>&gt;<br>&gt;<br>&gt;这是第二条引用。<br>效果：</p>
+<blockquote>
+<p>这是第一条引用。</p>
+<p>这是第二条引用。</p>
+</blockquote>
+<h4 id="嵌套块引用"><a href="#嵌套块引用" class="headerlink" title="嵌套块引用"></a>嵌套块引用</h4><p>块引用可以嵌套。在要嵌套的段落前添加一个 &gt;&gt; 符号。<br>写法：<br>&gt;这是第一条引用。<br>&gt;<br>&gt;这是第二条引用。<br>&gt;&gt;这是第二条的第一个引用。<br>效果：</p>
+<blockquote>
+<p>这是第一条引用。</p>
+<p>这是第二条引用。</p>
+<blockquote>
+<p>这是第二条的第一个引用。</p>
+</blockquote>
+</blockquote>
+<h4 id="带有其它元素的块引用"><a href="#带有其它元素的块引用" class="headerlink" title="带有其它元素的块引用"></a>带有其它元素的块引用</h4><p>块引用可以包含其他 Markdown 格式的元素。但并非所有元素都可以使用。</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。<br>写法：<br>1.这是第一条。<br>2.这是第二条。<br>3.这是第三条。<br>效果：<br>（没啥变化，就不写了）</p>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。<br>写法：<br>-这是第一条。<br>-这是第二条。<br>-这是第三条<br>效果：<br>（还是没啥变化）</p>
+<h4 id="在列表中嵌套其他元素"><a href="#在列表中嵌套其他元素" class="headerlink" title="在列表中嵌套其他元素"></a>在列表中嵌套其他元素</h4><p>要在保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符。</p>
+<h3 id="代码语法"><a href="#代码语法" class="headerlink" title="代码语法"></a>代码语法</h3><h4 id="创建代码"><a href="#创建代码" class="headerlink" title="创建代码"></a>创建代码</h4><p>要将单词或短语表示为代码，请将其包裹在反引号 (&#96;) 中</p>
+<h4 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h4><p>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(&#96;&#96;)中。</p>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。</p>
+<h4 id="Markdown-围栏代码块"><a href="#Markdown-围栏代码块" class="headerlink" title="Markdown 围栏代码块"></a>Markdown 围栏代码块</h4><p>Markdown基本语法允许通过将行缩进四个空格或一个制表符来创建代码块。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（&#96;&#96;&#96;）或三个波浪号（~~~）。</p>
+<p>写法：<br>`&#96;&#96;<br>System.out.print(“这是一个围栏代码块的实例”);<br>`&#96;&#96;<br>效果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">System.out.print(&quot;这是一个围栏代码块的实例&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。<br>写法：<br><code>---</code><br>效果：</p>
+<hr>
+<h3 id="链接语法"><a href="#链接语法" class="headerlink" title="链接语法"></a>链接语法</h3><h4 id="创建链接"><a href="#创建链接" class="headerlink" title="创建链接"></a>创建链接</h4><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。<br>超链接Markdown语法代码：<code>[超链接显示名](超链接地址)</code><br>我的网站代码：<a href="autlight.cn">秋光的网站</a></p>
+<h4 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h4><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。<br><code>这是一个链接 [秋光的网站](autlight。cn &quot;太牛了&quot;)。</code><br>我的网站代码：<a href="autlight.cn" title="太牛了">秋光的网站</a></p>
+<h4 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h4><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接</p>
+<h4 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h4><p>强调链接, 在链接语法前后增加星号。<br>要将链接表示为代码，在方括号中添加反引号。</p>
+<h4 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h4><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。<br><a href="autlight.cn">秋光的网站</a></p>
+<h5 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h5><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。<br><code>[秋光的网站][1]</code><br>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
+<h5 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式</h5><p>引用类型链接的第二部分使用以下属性设置格式：<br>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如[label]:）。<br>链接的URL，可以选择将其括在尖括号中。<br>链接的可选标题，可以将其括在双引号，单引号或括号中。<br><code>[1]: autlight.cn</code></p>
+<h3 id="图片语法"><a href="#图片语法" class="headerlink" title="图片语法"></a>图片语法</h3><h4 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h4><p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<h4 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h4><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。<br>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code>。</p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
+<h3 id="内嵌HTML标签"><a href="#内嵌HTML标签" class="headerlink" title="内嵌HTML标签"></a>内嵌HTML标签</h3><p>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需将 HTML 标签添加到 Markdown 文本中即可。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java数据类型和变量</title>
     <url>/2022/06/29/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><ul>
@@ -188,82 +264,6 @@ blablabla...
       </categories>
       <tags>
         <tag>JavaSE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>markdown基础语法</title>
-    <url>/2022/06/28/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。本文也使用markdown语法编写。</p>
-<hr>
-<span id="more"></span>
-
-<h2 id="markdown基本语法"><a href="#markdown基本语法" class="headerlink" title="markdown基本语法"></a>markdown基本语法</h2><h3 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h3><h4 id="创建标题"><a href="#创建标题" class="headerlink" title="创建标题"></a>创建标题</h4><p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (&lt;h3&gt;)<br>写法：<br><code>### 这是一个三级标题的实例</code><br>效果：</p>
-<h3 id="这是一个三级标题的实例"><a href="#这是一个三级标题的实例" class="headerlink" title="这是一个三级标题的实例"></a>这是一个三级标题的实例</h3><blockquote>
-<p>Tips:<br>也可以在短语下面用任意数量的“&#x3D;&#x3D;”来表示一级标题，二级标题用“–”。<br>不同的 Markdown 应用程序处理 # 和标题之间的空格方式并不一致。兼容考虑，<strong>用一个空格在 # 和标题之间进行分隔最为常用。</strong></p>
-</blockquote>
-<h3 id="段落语法"><a href="#段落语法" class="headerlink" title="段落语法"></a>段落语法</h3><h4 id="创建段落"><a href="#创建段落" class="headerlink" title="创建段落"></a>创建段落</h4><p>用空白行将一行或多行文本进行分隔来创建段落。<br><strong>不要用tab或者空格键进位。</strong></p>
-<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行<code>&lt;br&gt;</code>。</p>
-<blockquote>
-<p>Tips:<br>几乎每个 Markdown 应用程序都支持两个或多个空格进行换行，称为 结尾空格（trailing whitespace) 的方式，但这是有争议的，因为很难在编辑器中直接看到空格，并且很多人在每个句子后面都会有意或无意地添加两个空格。由于这个原因，你可能要使用除结尾空格以外的其它方式来换行。幸运的是，几乎每个 Markdown 应用程序都支持另一种换行方式:HTML的 <code>&lt;br&gt; </code>标签。<strong>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <code>&lt;br&gt;</code> 标签来实现换行。</strong><br>还有两种其他方式并不推荐使用。CommonMark 和其它几种轻量级标记语言支持在行尾添加反斜杠 () 的方式实现换行，但是并非所有 Markdown 应用程序都支持此种方式，因此从兼容性的角度来看，不推荐使用。并且至少有两种轻量级标记语言支持无须在行尾添加任何内容，只须键入回车键（return）即可实现换行。</p>
-</blockquote>
-<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><h4 id="粗体（Bold）"><a href="#粗体（Bold）" class="headerlink" title="粗体（Bold）"></a>粗体（Bold）</h4><p>要加粗文本，请在单词或短语的前后各<strong>添加两个星号（asterisks）或下划线（underscores）。</strong>如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。<br>写法<br><code>**这是一个粗体实例。**</code><br>效果：<br><strong>这是一个粗体实例。</strong></p>
-<blockquote>
-<p>Tips:<br>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号（asterisks）。</p>
-</blockquote>
-<h4 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h4><p>要用斜体显示文本，请在单词或短语前后<strong>添加一个星号（asterisk）或下划线（underscore）。</strong>要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。<br>写法：<br><code>*这是一个斜体实例。*</code><br>效果：<br><em>这是一个斜体实例。</em></p>
-<h4 id="粗体（Bold）和斜体（Italic）"><a href="#粗体（Bold）和斜体（Italic）" class="headerlink" title="粗体（Bold）和斜体（Italic）"></a>粗体（Bold）和斜体（Italic）</h4><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。<br>写法：<br><code>***这是一个加粗并斜体的实例。***</code><br>效果：<br><em><strong>这是一个加粗并斜体的实例。</strong></em></p>
-<blockquote>
-<p>Tips:<br>Markdown 应用程序在处理单词或短语中间添加的下划线上并不一致。为了实现兼容性，请使用星号将单词或短语的中间部分加粗并以斜体显示，以示重要。</p>
-</blockquote>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>要创建块引用，请在段落前添加一个 &gt; 符号。<br>eg：<br><code>&gt; 这是一个引用实例。</code><br>效果：</p>
-<blockquote>
-<p>这是一个引用实例。</p>
-</blockquote>
-<h4 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h4><p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。<br>写法:<br>&gt;这是第一条引用。<br>&gt;<br>&gt;<br>&gt;这是第二条引用。<br>效果：</p>
-<blockquote>
-<p>这是第一条引用。</p>
-<p>这是第二条引用。</p>
-</blockquote>
-<h4 id="嵌套块引用"><a href="#嵌套块引用" class="headerlink" title="嵌套块引用"></a>嵌套块引用</h4><p>块引用可以嵌套。在要嵌套的段落前添加一个 &gt;&gt; 符号。<br>写法：<br>&gt;这是第一条引用。<br>&gt;<br>&gt;这是第二条引用。<br>&gt;&gt;这是第二条的第一个引用。<br>效果：</p>
-<blockquote>
-<p>这是第一条引用。</p>
-<p>这是第二条引用。</p>
-<blockquote>
-<p>这是第二条的第一个引用。</p>
-</blockquote>
-</blockquote>
-<h4 id="带有其它元素的块引用"><a href="#带有其它元素的块引用" class="headerlink" title="带有其它元素的块引用"></a>带有其它元素的块引用</h4><p>块引用可以包含其他 Markdown 格式的元素。但并非所有元素都可以使用。</p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。<br>写法：<br>1.这是第一条。<br>2.这是第二条。<br>3.这是第三条。<br>效果：<br>（没啥变化，就不写了）</p>
-<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。<br>写法：<br>-这是第一条。<br>-这是第二条。<br>-这是第三条<br>效果：<br>（还是没啥变化）</p>
-<h4 id="在列表中嵌套其他元素"><a href="#在列表中嵌套其他元素" class="headerlink" title="在列表中嵌套其他元素"></a>在列表中嵌套其他元素</h4><p>要在保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符。</p>
-<h3 id="代码语法"><a href="#代码语法" class="headerlink" title="代码语法"></a>代码语法</h3><h4 id="创建代码"><a href="#创建代码" class="headerlink" title="创建代码"></a>创建代码</h4><p>要将单词或短语表示为代码，请将其包裹在反引号 (&#96;) 中</p>
-<h4 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h4><p>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(&#96;&#96;)中。</p>
-<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。</p>
-<h4 id="Markdown-围栏代码块"><a href="#Markdown-围栏代码块" class="headerlink" title="Markdown 围栏代码块"></a>Markdown 围栏代码块</h4><p>Markdown基本语法允许通过将行缩进四个空格或一个制表符来创建代码块。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（&#96;&#96;&#96;）或三个波浪号（~~~）。</p>
-<p>写法：<br>`&#96;&#96;<br>System.out.print(“这是一个围栏代码块的实例”);<br>`&#96;&#96;<br>效果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">System.out.print(&quot;这是一个围栏代码块的实例&quot;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。<br>写法：<br><code>---</code><br>效果：</p>
-<hr>
-<h3 id="链接语法"><a href="#链接语法" class="headerlink" title="链接语法"></a>链接语法</h3><h4 id="创建链接"><a href="#创建链接" class="headerlink" title="创建链接"></a>创建链接</h4><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。<br>超链接Markdown语法代码：<code>[超链接显示名](超链接地址)</code><br>我的网站代码：<a href="autlight.cn">秋光的网站</a></p>
-<h4 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h4><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。<br><code>这是一个链接 [秋光的网站](autlight。cn &quot;太牛了&quot;)。</code><br>我的网站代码：<a href="autlight.cn" title="太牛了">秋光的网站</a></p>
-<h4 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h4><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接</p>
-<h4 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h4><p>强调链接, 在链接语法前后增加星号。<br>要将链接表示为代码，在方括号中添加反引号。</p>
-<h4 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h4><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。<br><a href="autlight.cn">秋光的网站</a></p>
-<h5 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h5><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。<br><code>[秋光的网站][1]</code><br>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
-<h5 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式</h5><p>引用类型链接的第二部分使用以下属性设置格式：<br>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如[label]:）。<br>链接的URL，可以选择将其括在尖括号中。<br>链接的可选标题，可以将其括在双引号，单引号或括号中。<br><code>[1]: autlight.cn</code></p>
-<h3 id="图片语法"><a href="#图片语法" class="headerlink" title="图片语法"></a>图片语法</h3><h4 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h4><p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
-<h4 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h4><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。<br>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code>。</p>
-<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
-<h3 id="内嵌HTML标签"><a href="#内嵌HTML标签" class="headerlink" title="内嵌HTML标签"></a>内嵌HTML标签</h3><p>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需将 HTML 标签添加到 Markdown 文本中即可。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>markdown</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
