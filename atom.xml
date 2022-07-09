@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>秋光の</title>
+  
+  <subtitle>归路有秋光</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-07-08T15:24:56.769Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>秋光</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数组</title>
+    <link href="http://example.com/2022/07/08/%E6%95%B0%E7%BB%84/"/>
+    <id>http://example.com/2022/07/08/%E6%95%B0%E7%BB%84/</id>
+    <published>2022-07-08T12:05:10.000Z</published>
+    <updated>2022-07-08T15:24:56.769Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;数组是一种容器（放东西的东西），容器里面的东西叫做元素或者单元。我们可以把数组理解为变量的集合。&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://gitlab.com/autlight/pico/uploads/0d51a819ab4790fd2cefe13fda6e5ccb/%E6%95%B0%E7%BB%84.png&quot; alt=&quot;数组示意图&quot;&gt;&lt;br&gt;如图，我们可以这么理解数组的概念：一个数组就好比一个抽屉，里面放了很多贴着标签（索引）的小盒子（元素），每个小盒子里面放一张写着东西的卡片（数据）。我们要寻找哪张卡片只要打开对应标签的盒子就可以了。我们我们可以把不同类型的数组看成不同形状的抽屉，当我们创建一个整数类型的数组时，相当于打开一个正方形抽屉，只有里面同样是正方形盒子的时候才能装满它。也就是说，一个数组里的所有元素必须和数组本身是同一类型。同样，当我们打开一个抽屉的时候，它能放下多少小盒子已经是确定的。也就是说，数组的长度（元素容量）被创建后就不能改变了。&lt;/p&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="笔记" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaSE" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/JavaSE/"/>
+    
+    
+    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java数据类型和变量</title>
+    <link href="http://example.com/2022/06/29/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/"/>
+    <id>http://example.com/2022/06/29/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/</id>
+    <published>2022-06-29T12:53:37.000Z</published>
+    <updated>2022-07-01T15:03:24.995Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;计算机使用&lt;strong&gt;内存&lt;/strong&gt;来保存数据，当我们创建变量的时候，其实是告诉计算机在内存中申请一个空间来储存值，内存管理系统根据变量的类型来分配内存空间，而&lt;strong&gt;该类型的空间只能储存该类型的值&lt;/strong&gt;。比如：&lt;code&gt;int a = 1;&lt;/code&gt;就表示计算机分配出一个&lt;code&gt;int&lt;/code&gt;类型的空间来储存整数&lt;code&gt;1&lt;/code&gt;（将&lt;code&gt;1&lt;/code&gt;通过赋值符号&lt;code&gt;=&lt;/code&gt;赋给变量&lt;code&gt;a&lt;/code&gt;）。</summary>
+    
+    
+    
+    <category term="笔记" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaSE" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/JavaSE/"/>
+    
+    
+    <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown基础语法</title>
+    <link href="http://example.com/2022/06/28/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <id>http://example.com/2022/06/28/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</id>
+    <published>2022-06-28T14:52:52.000Z</published>
+    <updated>2022-07-01T05:03:50.130Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;markdown&quot;&gt;&lt;a href=&quot;#markdown&quot; class=&quot;headerlink&quot; title=&quot;markdown&quot;&gt;&lt;/a&gt;markdown&lt;/h1&gt;&lt;p&gt;Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。本文也使用markdown语法编写。&lt;/p&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="笔记" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="markdown" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/markdown/"/>
+    
+    
+    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="markdown" scheme="http://example.com/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java程序基本结构</title>
+    <link href="http://example.com/2022/06/27/Java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/"/>
+    <id>http://example.com/2022/06/27/Java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/</id>
+    <published>2022-06-27T13:48:34.000Z</published>
+    <updated>2022-07-01T11:56:21.024Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;一些基本概念&quot;&gt;&lt;a href=&quot;#一些基本概念&quot; class=&quot;headerlink&quot; title=&quot;一些基本概念&quot;&gt;&lt;/a&gt;一些基本概念&lt;/h1&gt;&lt;p&gt;一个 Java 程序可以认为是一系列对象的集合，而这些对象通过调用彼此的方法来协同工作。下面简要介绍下类、对象、方法和实例变量的概念。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象：对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。&lt;/li&gt;
+&lt;li&gt;类：类是一个模板，它描述一类对象的行为和状态。&lt;/li&gt;
+&lt;li&gt;方法：方法就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。&lt;/li&gt;
+&lt;li&gt;实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定</summary>
+    
+    
+    
+    <category term="笔记" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaSE" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0/JavaSE/"/>
+    
+    
+    <category term="笔记" scheme="http://example.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="JavaSE" scheme="http://example.com/tags/JavaSE/"/>
+    
+  </entry>
+  
+</feed>

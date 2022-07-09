@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CH">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="Hexo,秋光,代码,博客,学习" />
+       
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>markdown基础语法 |  秋光の</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="秋光の" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-markdown基础语法"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  markdown基础语法
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/06/28/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time datetime="2022-06-28T14:52:52.000Z" itemprop="datePublished">2022-06-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a> / <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/markdown/">markdown</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.5k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">8 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><p>Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown被大量使用，如Github、Wikipedia、简书等。本文也使用markdown语法编写。</p>
+<hr>
+<span id="more"></span>
+
+<h2 id="markdown基本语法"><a href="#markdown基本语法" class="headerlink" title="markdown基本语法"></a>markdown基本语法</h2><h3 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h3><h4 id="创建标题"><a href="#创建标题" class="headerlink" title="创建标题"></a>创建标题</h4><p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (&lt;h3&gt;)<br>写法：<br><code>### 这是一个三级标题的实例</code><br>效果：</p>
+<h3 id="这是一个三级标题的实例"><a href="#这是一个三级标题的实例" class="headerlink" title="这是一个三级标题的实例"></a>这是一个三级标题的实例</h3><blockquote>
+<p>Tips:<br>也可以在短语下面用任意数量的“&#x3D;&#x3D;”来表示一级标题，二级标题用“–”。<br>不同的 Markdown 应用程序处理 # 和标题之间的空格方式并不一致。兼容考虑，<strong>用一个空格在 # 和标题之间进行分隔最为常用。</strong></p>
+</blockquote>
+<h3 id="段落语法"><a href="#段落语法" class="headerlink" title="段落语法"></a>段落语法</h3><h4 id="创建段落"><a href="#创建段落" class="headerlink" title="创建段落"></a>创建段落</h4><p>用空白行将一行或多行文本进行分隔来创建段落。<br><strong>不要用tab或者空格键进位。</strong></p>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行<code>&lt;br&gt;</code>。</p>
+<blockquote>
+<p>Tips:<br>几乎每个 Markdown 应用程序都支持两个或多个空格进行换行，称为 结尾空格（trailing whitespace) 的方式，但这是有争议的，因为很难在编辑器中直接看到空格，并且很多人在每个句子后面都会有意或无意地添加两个空格。由于这个原因，你可能要使用除结尾空格以外的其它方式来换行。幸运的是，几乎每个 Markdown 应用程序都支持另一种换行方式:HTML的 <code>&lt;br&gt; </code>标签。<strong>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <code>&lt;br&gt;</code> 标签来实现换行。</strong><br>还有两种其他方式并不推荐使用。CommonMark 和其它几种轻量级标记语言支持在行尾添加反斜杠 () 的方式实现换行，但是并非所有 Markdown 应用程序都支持此种方式，因此从兼容性的角度来看，不推荐使用。并且至少有两种轻量级标记语言支持无须在行尾添加任何内容，只须键入回车键（return）即可实现换行。</p>
+</blockquote>
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><h4 id="粗体（Bold）"><a href="#粗体（Bold）" class="headerlink" title="粗体（Bold）"></a>粗体（Bold）</h4><p>要加粗文本，请在单词或短语的前后各<strong>添加两个星号（asterisks）或下划线（underscores）。</strong>如需加粗一个单词或短语的中间部分用以表示强调的话，请在要加粗部分的两侧各添加两个星号（asterisks）。<br>写法<br><code>**这是一个粗体实例。**</code><br>效果：<br><strong>这是一个粗体实例。</strong></p>
+<blockquote>
+<p>Tips:<br>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号（asterisks）。</p>
+</blockquote>
+<h4 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h4><p>要用斜体显示文本，请在单词或短语前后<strong>添加一个星号（asterisk）或下划线（underscore）。</strong>要斜体突出单词的中间部分，请在字母前后各添加一个星号，中间不要带空格。<br>写法：<br><code>*这是一个斜体实例。*</code><br>效果：<br><em>这是一个斜体实例。</em></p>
+<h4 id="粗体（Bold）和斜体（Italic）"><a href="#粗体（Bold）和斜体（Italic）" class="headerlink" title="粗体（Bold）和斜体（Italic）"></a>粗体（Bold）和斜体（Italic）</h4><p>要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。<br>写法：<br><code>***这是一个加粗并斜体的实例。***</code><br>效果：<br><em><strong>这是一个加粗并斜体的实例。</strong></em></p>
+<blockquote>
+<p>Tips:<br>Markdown 应用程序在处理单词或短语中间添加的下划线上并不一致。为了实现兼容性，请使用星号将单词或短语的中间部分加粗并以斜体显示，以示重要。</p>
+</blockquote>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>要创建块引用，请在段落前添加一个 &gt; 符号。<br>eg：<br><code>&gt; 这是一个引用实例。</code><br>效果：</p>
+<blockquote>
+<p>这是一个引用实例。</p>
+</blockquote>
+<h4 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h4><p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。<br>写法:<br>&gt;这是第一条引用。<br>&gt;<br>&gt;<br>&gt;这是第二条引用。<br>效果：</p>
+<blockquote>
+<p>这是第一条引用。</p>
+<p>这是第二条引用。</p>
+</blockquote>
+<h4 id="嵌套块引用"><a href="#嵌套块引用" class="headerlink" title="嵌套块引用"></a>嵌套块引用</h4><p>块引用可以嵌套。在要嵌套的段落前添加一个 &gt;&gt; 符号。<br>写法：<br>&gt;这是第一条引用。<br>&gt;<br>&gt;这是第二条引用。<br>&gt;&gt;这是第二条的第一个引用。<br>效果：</p>
+<blockquote>
+<p>这是第一条引用。</p>
+<p>这是第二条引用。</p>
+<blockquote>
+<p>这是第二条的第一个引用。</p>
+</blockquote>
+</blockquote>
+<h4 id="带有其它元素的块引用"><a href="#带有其它元素的块引用" class="headerlink" title="带有其它元素的块引用"></a>带有其它元素的块引用</h4><p>块引用可以包含其他 Markdown 格式的元素。但并非所有元素都可以使用。</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。<br>写法：<br>1.这是第一条。<br>2.这是第二条。<br>3.这是第三条。<br>效果：<br>（没啥变化，就不写了）</p>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。<br>写法：<br>-这是第一条。<br>-这是第二条。<br>-这是第三条<br>效果：<br>（还是没啥变化）</p>
+<h4 id="在列表中嵌套其他元素"><a href="#在列表中嵌套其他元素" class="headerlink" title="在列表中嵌套其他元素"></a>在列表中嵌套其他元素</h4><p>要在保留列表连续性的同时在列表中添加另一种元素，请将该元素缩进四个空格或一个制表符。</p>
+<h3 id="代码语法"><a href="#代码语法" class="headerlink" title="代码语法"></a>代码语法</h3><h4 id="创建代码"><a href="#创建代码" class="headerlink" title="创建代码"></a>创建代码</h4><p>要将单词或短语表示为代码，请将其包裹在反引号 (&#96;) 中</p>
+<h4 id="转义反引号"><a href="#转义反引号" class="headerlink" title="转义反引号"></a>转义反引号</h4><p>如果你要表示为代码的单词或短语中包含一个或多个反引号，则可以通过将单词或短语包裹在双反引号(&#96;&#96;)中。</p>
+<h4 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h4><p>要创建代码块，请将代码块的每一行缩进至少四个空格或一个制表符。</p>
+<h4 id="Markdown-围栏代码块"><a href="#Markdown-围栏代码块" class="headerlink" title="Markdown 围栏代码块"></a>Markdown 围栏代码块</h4><p>Markdown基本语法允许通过将行缩进四个空格或一个制表符来创建代码块。如果发现不方便，请尝试使用受保护的代码块。根据Markdown处理器或编辑器的不同，您将在代码块之前和之后的行上使用三个反引号（&#96;&#96;&#96;）或三个波浪号（~~~）。</p>
+<p>写法：<br>`&#96;&#96;<br>System.out.print(“这是一个围栏代码块的实例”);<br>`&#96;&#96;<br>效果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.print(&quot;这是一个围栏代码块的实例&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>要创建分隔线，请在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容。<br>写法：<br><code>---</code><br>效果：</p>
+<hr>
+<h3 id="链接语法"><a href="#链接语法" class="headerlink" title="链接语法"></a>链接语法</h3><h4 id="创建链接"><a href="#创建链接" class="headerlink" title="创建链接"></a>创建链接</h4><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。<br>超链接Markdown语法代码：<code>[超链接显示名](超链接地址)</code><br>我的网站代码：<a href="autlight.cn">秋光的网站</a></p>
+<h4 id="给链接增加-Title"><a href="#给链接增加-Title" class="headerlink" title="给链接增加 Title"></a>给链接增加 Title</h4><p>链接title是当鼠标悬停在链接上时会出现的文字，这个title是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔。<br><code>这是一个链接 [秋光的网站](autlight。cn &quot;太牛了&quot;)。</code><br>我的网站代码：<a href="autlight.cn" title="太牛了">秋光的网站</a></p>
+<h4 id="网址和Email地址"><a href="#网址和Email地址" class="headerlink" title="网址和Email地址"></a>网址和Email地址</h4><p>使用尖括号可以很方便地把URL或者email地址变成可点击的链接</p>
+<h4 id="带格式化的链接"><a href="#带格式化的链接" class="headerlink" title="带格式化的链接"></a>带格式化的链接</h4><p>强调链接, 在链接语法前后增加星号。<br>要将链接表示为代码，在方括号中添加反引号。</p>
+<h4 id="引用类型链接"><a href="#引用类型链接" class="headerlink" title="引用类型链接"></a>引用类型链接</h4><p>引用样式链接是一种特殊的链接，它使URL在Markdown中更易于显示和阅读。参考样式链接分为两部分：与文本保持内联的部分以及存储在文件中其他位置的部分，以使文本易于阅读。<br><a href="autlight.cn">秋光的网站</a></p>
+<h5 id="链接的第一部分格式"><a href="#链接的第一部分格式" class="headerlink" title="链接的第一部分格式"></a>链接的第一部分格式</h5><p>引用类型的链接的第一部分使用两组括号进行格式设置。第一组方括号包围应显示为链接的文本。第二组括号显示了一个标签，该标签用于指向您存储在文档其他位置的链接。<br><code>[秋光的网站][1]</code><br>尽管不是必需的，可以在第一组和第二组括号之间包含一个空格。第二组括号中的标签不区分大小写，可以包含字母，数字，空格或标点符号。</p>
+<h5 id="链接的第二部分格式"><a href="#链接的第二部分格式" class="headerlink" title="链接的第二部分格式"></a>链接的第二部分格式</h5><p>引用类型链接的第二部分使用以下属性设置格式：<br>放在括号中的标签，其后紧跟一个冒号和至少一个空格（例如[label]:）。<br>链接的URL，可以选择将其括在尖括号中。<br>链接的可选标题，可以将其括在双引号，单引号或括号中。<br><code>[1]: autlight.cn</code></p>
+<h3 id="图片语法"><a href="#图片语法" class="headerlink" title="图片语法"></a>图片语法</h3><h4 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h4><p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<h4 id="链接图片"><a href="#链接图片" class="headerlink" title="链接图片"></a>链接图片</h4><p>给图片增加链接，请将图像的Markdown 括在方括号中，然后将链接添加在圆括号中。<br>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code>。</p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>要显示原本用于格式化 Markdown 文档的字符，请在字符前面添加反斜杠字符 \ 。</p>
+<h3 id="内嵌HTML标签"><a href="#内嵌HTML标签" class="headerlink" title="内嵌HTML标签"></a>内嵌HTML标签</h3><p>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需将 HTML 标签添加到 Markdown 文本中即可。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/06/28/markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2022/06/29/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Java数据类型和变量
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2022/06/27/Java%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Java程序基本结构</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "Affc6hTM4ffKYuRSxvdtdmNc-gzGzoHsz",
+    app_key: "9YHqTHz6wjxPzhQx8kgkNbHa",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+    
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022
+        <i class="ri-heart-fill heart_icon"></i> 秋光
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="秋光の"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/photos">图片</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>
